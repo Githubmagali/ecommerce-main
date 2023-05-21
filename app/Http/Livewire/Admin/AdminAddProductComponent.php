@@ -4,10 +4,10 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Category;
 use App\Models\Product;
-use Carbon\Carbon;
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
+use Carbon\Carbon;
 
 class AdminAddProductComponent extends Component
 {
