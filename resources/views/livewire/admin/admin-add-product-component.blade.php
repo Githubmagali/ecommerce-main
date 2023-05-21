@@ -56,16 +56,16 @@
                                     </div>
                                     <div class="mb-3 mt-3">
                                         <label for="short_description" class="form-label">Short description</label>
-                                        <textarea class="form-control" placeholder="Enter short description"name="short_description" wire:model="short_description"></textarea>
-                                         @error('short_description')
+                                        <textarea class="form-control" placeholder="Enter short description" name="short_description" wire:model="short_description"></textarea>
+                                        @error('short_description')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
                                     </div>
 
                                     <div class="mb-3 mt-3">
                                         <label for="description" class="form-label">Description</label>
-                                        <textarea class="form-control" placeholder="Description"name="description" wire:model="description"></textarea>
-                                         @error('description')
+                                        <textarea class="form-control" placeholder="Description" name="description" wire:model="description"></textarea>
+                                        @error('description')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
                                     </div>
@@ -91,22 +91,22 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3 mt-3">
-                                        <label for="stock_status" class="form-label" >Stock status</label>
-                                        <select class="form-control"wire:model="stock_status">
-                                        <option value="instock">Instock</option>
-                                        <option value="outofstock">Out ot stock</option>
+                                        <label for="stock_status" class="form-label">Stock status</label>
+                                        <select class="form-control" wire:model="stock_status">
+                                            <option value="instock">Instock</option>
+                                            <option value="outofstock">Out ot stock</option>
                                         </select>
                                         @error('stock_status')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
                                     </div>
                                     <div class="mb-3 mt-3">
-                                        <label for="featured" class="form-label" >Featured</label>
-                                       
-                                       <select class="form-control"wire:model="featured">
-                                        <option value="0">No</option>
-                                        <option value="1">Yes</option>
-                                       </select>
+                                        <label for="featured" class="form-label">Featured</label>
+
+                                        <select class="form-control" wire:model="featured">
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
                                         @error('featured')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
@@ -121,7 +121,7 @@
                                     </div>
                                     <div class="mb-3 mt-3">
                                         <label for="image" class="form-label">Image</label>
-                                        <input type="file"name="image" class="form-control"wire:model="image">
+                                        <input type="file" name="image" class="form-control" wire:model="image">
                                         @if($image)
                                         <img src="{{$image->temporaryUrl()}}" width="120" />
                                         @endif
@@ -132,12 +132,12 @@
 
                                     <div class="mb-3 mt-3">
                                         <label for="category_id" class="form-label">Category</label>
-                                       <select class="form-control" name="category_id" wire:model="category_id">
-                                        <option value="">Select category</option>
-                                        @foreach($categories as $category)
-                                        <option value="{{$category->id}}">{{$category->name}}</option>
-                                        @endforeach
-                                       </select>
+                                        <select class="form-control" name="category_id" wire:model="category_id">
+                                            <option value="">Select category</option>
+                                            @foreach($categories as $category)
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @endforeach
+                                        </select>
                                         @error('category')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
