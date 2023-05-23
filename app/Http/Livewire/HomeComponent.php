@@ -9,7 +9,7 @@ use App\Models\HomeSlider;
 use Cart;
 
 class HomeComponent extends Component
-{
+{                 //store actualiza un registro 
     public function store($product_id,$product_name,$product_price){
 
         Cart::instance('cart')->add($product_id,$product_name,1,$product_price)->associate('\App\Models\Product');
