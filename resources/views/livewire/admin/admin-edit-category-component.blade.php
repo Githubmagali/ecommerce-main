@@ -53,11 +53,11 @@
                                 </div>
                                 <div class="mb-3 mt-3">
                                         <label for="image" class="form-label">Image</label>
-                                    <input type="file" name="image" class="form-control" wire:model= "newimage" />
+                                    <input type="file"name="image" class="form-control" wire:model= "newimage" />  
                                     @error('newimage')
                                     <p class="text-danger">{{$message}}</p>
-                                @enderror
-                                @if($newimage)
+                                  @enderror
+                                    @if($newimage)
                                 <img src="{{$newimage->temporaryUrl()}}" width="120" />
                                 @else
                                 <img src="{{asset('assets/imgs/categories')}}/{{$image}}"  width="120" />
@@ -69,7 +69,7 @@
                                     <option value="0">No</option>
                                     <option value="1">Yes</option>
                                     </select>
-                                    @error('slug')
+                                    @error('is_popular')
                                     <p class="text-danger">{{$message}}</p>
                                 @enderror
                                 </div>

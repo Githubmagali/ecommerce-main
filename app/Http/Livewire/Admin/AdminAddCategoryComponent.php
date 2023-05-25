@@ -10,7 +10,7 @@ use Livewire\WithFileUploads;
 
 class AdminAddCategoryComponent extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads; //siempre que querramos guardar un archivo, en este caso en la carpeta categories imagenes
 
     public $name;
     public $slug;

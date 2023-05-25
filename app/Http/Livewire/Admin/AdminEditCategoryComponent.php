@@ -2,10 +2,11 @@
 
 namespace App\Http\Livewire\Admin;
 
-use Livewire\Component;
+
 use App\Models\Category;
-use Illuminate\Support\Str;
 use Carbon\Carbon;
+use Livewire\Component;
+use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
 
 class AdminEditCategoryComponent extends Component
@@ -53,13 +54,12 @@ class AdminEditCategoryComponent extends Component
         $category = Category::find($this->category_id);
         $category->name = $this->name;
         $category->slug = $this->slug;
-        if($this->newimage);
+        if($this->newimage)
         {
-            unlink('assets/imgs/categories/'.$category->image);
+            unlink('assets/imgs/categories/'.$category->newimage);
             $imageName = Carbon::now()->timestamp.'.'.$this->newimage->extension();
             $this->newimage->storeAs('categories', $imageName);
             $category->image = $imageName;
-            
         }
         $category->is_popular = $this->is_popular;
         $category->save();
